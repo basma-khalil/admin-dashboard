@@ -101,23 +101,23 @@ export default function GaugeChart({ progress, size = 40 }: GaugeChartProps) {
       sx={{
         background: `radial-gradient(${theme.palette.background.paper} 55%, transparent 56%),
             conic-gradient(transparent 0deg ${angle}deg, ${theme.palette.text.secondary} ${angle}deg 360deg),
-            ${theme.palette.text.secondary}`,
+            ${theme.palette.secondary.main}`,
         borderRadius: '50%',
         width: `${size}px`,
         height: `${size}px`,
-        animation: 'fill 1.5s forwards',
-        '@keyframes fill': {
-          '0%': {
-            background: `radial-gradient(${theme.palette.background.paper} 55%, transparent 56%),
-            conic-gradient(transparent 0deg ${angle}deg, ${theme.palette.text.secondary} ${angle}deg 360deg),
-            ${theme.palette.text.secondary}`,
-          },
-          '100%': {
-            background: `radial-gradient(${theme.palette.background.paper} 55%, transparent 56%),
-            conic-gradient(transparent 0deg ${angle}deg, ${theme.palette.text.secondary} ${angle}deg 360deg),
-            ${theme.palette.secondary.main}`,
-          },
-        }
+        // animation: 'fill 1.5s forwards',
+        // '@keyframes fill': {
+        //   '0%': {
+        //     background: `radial-gradient(${theme.palette.background.paper} 55%, transparent 56%),
+        //     conic-gradient(transparent 0deg ${angle}deg, ${theme.palette.text.secondary} ${angle}deg 360deg),
+        //     ${theme.palette.text.secondary}`,
+        //   },
+        //   '100%': {
+        //     background: `radial-gradient(${theme.palette.background.paper} 55%, transparent 56%),
+        //     conic-gradient(transparent 0deg ${angle}deg, ${theme.palette.text.secondary} ${angle}deg 360deg),
+        //     ${theme.palette.secondary.main}`,
+        //   },
+        // }
       }}
     />
   );
