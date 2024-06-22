@@ -10,7 +10,7 @@ export default function DashboardCard({
   title: string;
 }>) {
   return (
-    <Paper elevation={0} sx={{ height: '280px', padding: '30px', overflow: 'visible' }}>
+    <Paper elevation={0} sx={{ height: '300px', padding: '30px', overflow: 'hidden' }}>
       <Typography
         component={'h4'}
         variant="h5"
