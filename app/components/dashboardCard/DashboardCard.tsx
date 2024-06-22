@@ -10,11 +10,17 @@ export default function DashboardCard({
   title: string;
 }>) {
   return (
-    <Paper elevation={0} sx={{ height: '300px', padding: '30px', overflow: 'hidden' }}>
+    <Paper elevation={0} sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '3px',
+      height: '300px',
+      padding: '30px',
+      overflow: 'hidden'
+    }}>
       <Typography
         component={'h4'}
         variant="h5"
-        mb={'3px'}
         fontWeight="600"
         textTransform={'capitalize'}
       >
