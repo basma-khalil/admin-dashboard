@@ -13,7 +13,7 @@ import Error from '../error';
 
 export default function Contacts() {
   const contactsDataURL =
-    'https://basma-khalil.github.io/admin-dashboard/data/api/contacts.json';
+    'https://admin-dashboard-theme.netlify.app/api/contacts';
   const { data, isLoading, error } = useFetch<ContactsData>(contactsDataURL);
 
   let rows: ContactsData;
