@@ -1,4 +1,13 @@
-/* Types declaration for project fake API data */
+/* Types declaration for project mock API data */
+
+// Transaction API
+interface Transaction {
+  txId: string;
+  user: string;
+  date: string;
+  cost: number;
+}
+type TransactionsData = readonly Transaction[];
 
 // Team API
 interface Team {
