@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 // Simulate fetching the data from an API endpoint instead of importing the data directly
 const getTransactionsData = async (): Promise<TransactionsData> => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const transactionsDataUrl =`${baseUrl}/api/transactions`;
+  const transactionsDataUrl =`${baseUrl}/api/transactions.json;
 
   const response = await fetch(transactionsDataUrl, {
     next: { revalidate: 3600 },
