@@ -14,7 +14,7 @@ import Error from '../error';
 export default function Contacts() {
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const contactsDataURL = `${baseUrl}/api/contacts`;
+  const contactsDataURL = `${baseUrl}/api/contacts.json`;
   const { data, isLoading, error } = useFetch<ContactsData>(contactsDataURL);
 
   let rows: ContactsData;
