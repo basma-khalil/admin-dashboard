@@ -23,7 +23,7 @@ export default function BarChart() {
   
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const pieDataURL = `${baseUrl}/api/pie-chart`;
+  const pieDataURL = `${baseUrl}/api/pie-chart.json`;
   const { data, isLoading, error } = useFetch<PieChartData>(pieDataURL);
 
   // const series: ApexAxisChartSeries | ApexNonAxisChartSeries | undefined =
