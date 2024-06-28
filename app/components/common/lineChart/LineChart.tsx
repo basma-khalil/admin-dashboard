@@ -24,7 +24,7 @@ export default function LineChart({ isDashboard }: LineChartProps) {
 
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const lineDataURL = `${baseUrl}/api/line-chart`;
+  const lineDataURL = `${baseUrl}/api/line-chart.json`;
   const { data, isLoading, error } = useFetch<
     ApexAxisChartSeries | ApexNonAxisChartSeries | undefined
   >(lineDataURL);
