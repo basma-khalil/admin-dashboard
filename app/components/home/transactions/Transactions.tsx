@@ -43,7 +43,7 @@ export default async function Transactions() {
             <Box>
               <Typography
                 variant="h5"
-                color={'secondary.main'}
+                color='secondary.main'
                 fontWeight={600}
               >
                 {data.txId}
@@ -51,13 +51,13 @@ export default async function Transactions() {
               <Typography>{data.user}</Typography>
             </Box>
 
-            <Box component={'span'}>{data.date}</Box>
+            <Box component='span'>{data.date}</Box>
 
             <Box
-              component={'span'}
-              padding={'5px 10px'}
-              bgcolor={'secondary.main'}
-              borderRadius={'4px'}
+              component='span'
+              padding='5px 10px'
+              bgcolor='secondary.main'
+              borderRadius='4px'
             >{'$' + data.cost}</Box>
           </ListItem>
         ))}
