@@ -2,6 +2,8 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
+// Data
+import { mockTransactions } from '../../../../data/mockData';
 
 // Simulate fetching the data from an API endpoint instead of importing the data directly
 const getTransactionsData = async (): Promise<TransactionsData> => {
@@ -19,12 +21,12 @@ const getTransactionsData = async (): Promise<TransactionsData> => {
 };
 
 export default async function Transactions() {
-  const TransactionsData = await getTransactionsData();
+  //const TransactionsData = await getTransactionsData();
 
   return (
     <Box sx={{ height: '100%', overflow: 'auto' }}>
       <List sx={{ padding: '0' }}>
-        {TransactionsData.map((data, index) => (
+        {mockTransactions.map((data, index) => (
           <ListItem
             key={`${data.txId}-${index}`}
             sx={{
