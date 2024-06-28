@@ -21,12 +21,12 @@ const getTransactionsData = async (): Promise<TransactionsData> => {
 };
 
 export default async function Transactions() {
-  //const TransactionsData = await getTransactionsData();
+  const transactionsData = await getTransactionsData();
 
   return (
     <Box sx={{ height: '100%', overflow: 'auto' }}>
       <List sx={{ padding: '0' }}>
-        {mockTransactions.map((data, index) => (
+        {transactionsData.map((data, index) => (
           <ListItem
             key={`${data.txId}-${index}`}
             sx={{
