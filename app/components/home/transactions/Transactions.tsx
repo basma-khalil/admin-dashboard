@@ -28,7 +28,7 @@ export default async function Transactions() {
       <List sx={{ padding: '0' }}>
         {transactionsData.map((data, index) => (
           <ListItem
-            key={`${data.txId}-${index}`}
+            key={data.txId + '-' + index}
             sx={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -58,7 +58,7 @@ export default async function Transactions() {
               padding={'5px 10px'}
               bgcolor={'secondary.main'}
               borderRadius={'4px'}
-            >{`$${data.cost}`}</Box>
+            >{'$' + data.cost}</Box>
           </ListItem>
         ))}
       </List>
