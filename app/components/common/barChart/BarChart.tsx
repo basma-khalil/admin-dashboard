@@ -24,7 +24,7 @@ export default function BarChart({ isDashboard }: BarChartProps) {
 
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const barDataURL = `${baseUrl}/api/bar-chart`;
+  const barDataURL = `${baseUrl}/api/bar-chart.json`;
   const { data, isLoading, error } = useFetch<
     ApexAxisChartSeries | ApexNonAxisChartSeries | undefined
   >(barDataURL);
