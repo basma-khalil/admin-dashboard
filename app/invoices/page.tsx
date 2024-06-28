@@ -15,7 +15,7 @@ import { type GridColDef } from '@mui/x-data-grid';
 export default function Invoices() {
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const invoicesDataURL = `${baseUrl}/api/invoices`;
+  const invoicesDataURL = `${baseUrl}/api/invoices.json`;
   const { data, isLoading, error } = useFetch<InvoicesData>(invoicesDataURL);
 
   let rows: InvoicesData;
