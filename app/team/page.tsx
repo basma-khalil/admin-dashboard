@@ -25,7 +25,7 @@ export default function Team() {
 
   // Simulate fetching the data from an API endpoint instead of importing the data directly
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const teamDataURL = `${baseUrl}/api/team`;
+  const teamDataURL = `${baseUrl}/api/team.json`;
   const { data, isLoading, error } = useFetch<TeamData>(teamDataURL);
 
   let rows: TeamData;
