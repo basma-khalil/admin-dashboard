@@ -27,7 +27,7 @@ export default function BarChart({ isDashboard }: BarChartProps) {
   const barDataURL = `${baseUrl}/api/bar-chart`;
   const { data, isLoading, error } = useFetch<
     ApexAxisChartSeries | ApexNonAxisChartSeries | undefined
-  >(barDataURL);
+  >(baseUrl);
 
   useEffect(() => {
     setIsClient(true);
