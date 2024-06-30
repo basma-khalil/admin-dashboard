@@ -23,10 +23,7 @@ export default function BarChart({ isDashboard }: BarChartProps) {
   const { options } = useBarChartOptions(isDashboard);
 
   // Simulate fetching the data from an API endpoint instead of importing the data directly
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
-  console.log(baseUrl);
-  const testUrl = 'https://admin-dashboard-theme.netlify.app/api/bar-chart';
-  const barDataURL = `${baseUrl}/api/bar-chart`;
+  const barDataURL = '/api/bar-chart';
   const { data, isLoading, error } = useFetch<
     ApexAxisChartSeries | ApexNonAxisChartSeries | undefined
   >(barDataURL);
