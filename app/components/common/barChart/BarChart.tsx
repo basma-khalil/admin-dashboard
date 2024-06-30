@@ -23,7 +23,7 @@ export default function BarChart({ isDashboard }: BarChartProps) {
   const { options } = useBarChartOptions(isDashboard);
 
   // Simulate fetching the data from an API endpoint instead of importing the data directly
-  const baseUrl = process.env.NEXT_PUBLIC_TEST_URL as string;
+  const baseUrl = process.env.TEST_URL as string;
   console.log(baseUrl);
   const testUrl = 'https://admin-dashboard-theme.netlify.app/api/bar-chart';
   const barDataURL = `${baseUrl}/api/bar-chart`;
