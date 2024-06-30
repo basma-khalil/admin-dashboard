@@ -110,7 +110,7 @@ export default function Home() {
         {/* TRANSACTIONS */}
         <Grid item xs={12} md={4}>
           <DashboardCard title="recent transactions" padding="0">
-            {/* <Transactions /> */}
+            <Transactions />
           </DashboardCard>
         </Grid>
 
