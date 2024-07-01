@@ -8,7 +8,8 @@ import { mockTransactions } from '../../../../data/mockData';
 // Simulate fetching the data from an API endpoint instead of importing the data directly
 const getTransactionsData = async (): Promise<TransactionsData> => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const transactionsDataUrl ='https://basma-khalil.github.io/admin-dashboard/data/api/transactions.json';
+  //const transactionsDataUrl ='https://basma-khalil.github.io/admin-dashboard/data/api/transactions.json';
+  const transactionsDataUrl ='https://admin-dashboard-theme.netlify.app/api/transactions';
 
   const response = await fetch(transactionsDataUrl, {
     next: { revalidate: 3600 },
