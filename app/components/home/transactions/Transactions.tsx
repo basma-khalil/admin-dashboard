@@ -7,7 +7,7 @@ import { mockTransactions } from '../../../../data/mockData';
 
 // Simulate fetching the data from an API endpoint instead of importing the data directly
 const getTransactionsData = async (): Promise<TransactionsData> => {
-  const baseUrl = process.env.NEXT_PUBLIC_TEST_URL;
+  const baseUrl = process.env.TEST_URL;
   //const transactionsDataUrl ='https://basma-khalil.github.io/admin-dashboard/data/api/transactions.json';
   const transactionsDataUrl =`${baseUrl}/api/transactions`;
 
