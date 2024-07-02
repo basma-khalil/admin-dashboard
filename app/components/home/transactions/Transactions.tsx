@@ -12,7 +12,7 @@ const getTransactionsData = async (): Promise<TransactionsData> => {
   const transactionsDataUrl =`${baseUrl}/api/transactions`;
 
   const response = await fetch(transactionsDataUrl, {
-    next: { revalidate: 0 },
+    next: { revalidate: 3600 },
   });
   if (!response.ok) {
     throw new Error('Failed to fetch data');
