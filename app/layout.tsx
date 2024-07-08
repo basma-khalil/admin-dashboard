@@ -35,7 +35,12 @@ export default function RootLayout({
             >
               <Header />
               <Sidebar />
-              <Box component={'main'} gridArea={'main'} width={'100%'} p={3}>
+              <Box
+                component={'main'}
+                gridArea={'main'}
+                width={'100%'}
+                p={{ xs: 2, sm: 3 }}
+              >
                 {children}
               </Box>
             </Box>
