@@ -14,6 +14,11 @@ export default function useBarChartOptions(isDashboard: boolean = false) {
         stacked: true,
         background: 'transparent',
         offsetX: isDashboard ? -10 : undefined,
+        events: {
+          animationEnd: (chart) => {
+            chart.windowResizeHandler();
+          },
+        },
         toolbar: {
           tools: {
             download: isDashboard ? false : true,

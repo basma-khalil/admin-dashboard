@@ -12,6 +12,11 @@ export default function usePieChartOptions() {
       chart: {
         type: 'pie',
         background: 'transparent',
+        events: {
+          animationEnd: (chart) => {
+            chart.windowResizeHandler();
+          },
+        },
         toolbar: {
           tools: {
             download: true,
@@ -64,6 +69,7 @@ export default function usePieChartOptions() {
           breakpoint: 480,
           options: {
             legend: {
+              offsetY: 10,
               itemMargin: {
                 horizontal: 10,
                 vertical: 10,

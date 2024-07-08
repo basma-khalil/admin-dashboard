@@ -19,6 +19,11 @@ export default function useLineChartOptions(isDashboard: boolean = false) {
       chart: {
         type: 'line',
         background: 'transparent',
+        events: {
+          animationEnd: (chart) => {
+            chart.windowResizeHandler();
+          },
+        },
         toolbar: {
           tools: {
             download: isDashboard ? customIcon : true,
@@ -148,7 +153,7 @@ export default function useLineChartOptions(isDashboard: boolean = false) {
             legend: {
               position: 'bottom',
               offsetX: -10,
-              offsetY: 10,
+              offsetY: isDashboard ? 0 : 10,
             },
           },
         },
