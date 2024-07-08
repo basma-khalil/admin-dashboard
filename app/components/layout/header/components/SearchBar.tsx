@@ -12,7 +12,7 @@ export default function SearchBar() {
         placeholder="Search"
         inputProps={{ 'aria-label': 'search' }}
       />
-      <IconButton type="button" sx={{ p: 1 }}>
+      <IconButton type="button" aria-label='search' sx={{ p: 1 }}>
         <SearchIcon />
       </IconButton>
     </Box>
