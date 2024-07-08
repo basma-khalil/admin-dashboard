@@ -1,8 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NextLink from 'next/link';
-import { useTheme, useMediaQuery, type Theme, type CSSObject } from '@mui/material';
+import {
+  useTheme,
+  useMediaQuery,
+  type Theme,
+  type CSSObject,
+} from '@mui/material';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Link from '@mui/material/Link';
@@ -19,15 +24,29 @@ import { home, data, pages, charts } from './data';
 
 export default function Sidebar() {
   const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down('sm')
+    theme.breakpoints.down('md')
   );
-  const initIsOpen = isMobile ? false : true;
-  const [isOpen, setIsOpen] = useState(initIsOpen);
+  const [isOpen, setIsOpen] = useState(!isMobile);
   const theme = useTheme();
   const drawerWidth = 270;
+  const closedDrawerWidth = 70;
+
+  useEffect(() => {
+    setIsOpen(!isMobile);
+  }, [isMobile]);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (e: React.MouseEvent<HTMLElement>) => {
+    if (
+      isMobile &&
+      (e.target as HTMLElement).getAttribute('name') !== 'toggle-sidebar' &&
+      isOpen
+    ) {
+      setIsOpen(false);
+    }
   };
 
   const openedMixin = (theme: Theme): CSSObject => ({
@@ -37,6 +56,7 @@ export default function Sidebar() {
       duration: theme.transitions.duration.enteringScreen,
     }),
     overflowX: 'hidden',
+    ...(isMobile && { position: 'absolute' }),
   });
 
   const closedMixin = (theme: Theme): CSSObject => ({
@@ -45,12 +65,13 @@ export default function Sidebar() {
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: 70,
+    width: closedDrawerWidth,
   });
 
   return (
     <Box
       component={'aside'}
+      onClick={handleClickOutside}
       sx={{
         gridArea: 'aside',
         width: drawerWidth,
@@ -64,7 +85,7 @@ export default function Sidebar() {
       }}
     >
       <Drawer
-        variant="permanent"
+        variant={!isOpen ? 'permanent' : isMobile ? 'temporary' : 'permanent'}
         open={isOpen}
         elevation={0}
         PaperProps={{
@@ -123,7 +144,8 @@ export default function Sidebar() {
             </Link>
           )}
           <IconButton
-            aria-label="toggle menu"
+            name="toggle-sidebar"
+            aria-label={isOpen ? 'close sidebar menu' : 'open sidebar menu'}
             onClick={toggleDrawer}
             sx={{ marginLeft: isOpen ? 0 : '4px' }}
           >
