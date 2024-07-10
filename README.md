@@ -2,13 +2,15 @@
 
 A dashboard website with a variety of charts
 
+![Admin dashboard responsive](preview/admin-dashboard-responsive.png)
+
 ## Table of Contents
 
 - [Admin Dashboard](#admin-dashboard)
   - [Table of Contents](#table-of-contents)
   - [About the Project](#about-the-project)
     - [Description](#description)
-    - [Live preview](#live-preview)
+    - [Preview](#preview)
     - [Built With](#built-with)
     - [Features](#features)
     - [Usability](#usability)
@@ -25,9 +27,11 @@ A dashboard website with a variety of charts
 
 ### Description
 
-This dashboard website is a [**Next.js**](https://nextjs.org/) app, bootstrapped with [**create-next-app**](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), built with [**TypeScript**](https://www.typescriptlang.org/ "Go to website"), along with using [**Material UI**](https://mui.com/ "Go to website") to customize and style the app.
+This dashboard website is a [**Next.js**](https://nextjs.org/) app, bootstrapped with [**create-next-app**](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), built with [**TypeScript**](https://www.typescriptlang.org/ "Go to website") and [**Material UI**](https://mui.com/ "Go to website") to customize and style the app.
 
-### Live preview
+### Preview
+
+https://github.com/basma-khalil/admin-dashboard/assets/110143256/705b09d9-8480-49dc-a7eb-b922230cd583
 
 ### Built With
 
@@ -38,14 +42,14 @@ This dashboard website is a [**Next.js**](https://nextjs.org/) app, bootstrapped
 - Multi-page website
 - 10+ Specialized pages for different services
 - Server-side API routes
-- Real-time dashboard
+- Interactive dashboard
 - Editable calendar with the ability to add and delete events
 - User-friendly data grid interface with the ability to edit, sort, and filter
 - Validated form
 - Light/dark mode
-- Export dashboard data to a downloadable PDF file
+- Export dashboard data to a downloadable PDF report
 - Responsive web design
-- Cross browser support
+- Cross-browser support
 - Optimized code
 
 ### Usability
